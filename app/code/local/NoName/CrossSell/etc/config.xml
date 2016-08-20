@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sysint_CrossSell>
+          <version>1.0.0</version>
+        </Sysint_CrossSell>
+    </modules>
+    <global>
+        <blocks>
+            <crosssell>
+                <class>Sysint_CrossSell_Block</class>
+            </crosssell>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <crosssell>
+                    <file>sysint_crosssell.xml</file>
+                </crosssell>
+            </updates>
+        </layout>
+    </frontend>
+</config>
