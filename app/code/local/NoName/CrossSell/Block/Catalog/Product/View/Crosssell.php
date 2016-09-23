@@ -15,9 +15,8 @@ class NoName_CrossSell_Block_Catalog_Product_View_Crosssell extends Mage_Checkou
         if (is_null($items)) {
             $items = array();
                 if (count($items) < $this->_maxItemCount) {
-                    $filterProductIds = array_merge($this->_getCartProductIds(), $this->_getCartProductIdsRel());
                     $collection = $this->_getCollection()
-                        ->addProductFilter($filterProductIds)
+                        ->addProductFilter($this->getProduct()->getId())
                         ->setPageSize($this->_maxItemCount-count($items))
                         ->setGroupBy()
                         ->setPositionOrder()
